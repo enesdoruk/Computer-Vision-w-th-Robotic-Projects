@@ -1,0 +1,7 @@
+<launch>
+  <node name="bag2dataset_node" pkg="bag2dataset" type="bag2dataset.py" output="screen">
+    <param name = "path" value = "/home/enesdrk/Desktop/weather_classification/weather_ros/src/bag2dataset/src/dataset" />
+    <param name = "cls" value = "Rainy" />
+    <param name = "topic" value = "/dash_center/image_rect" />
+  </node>
+</launch>
