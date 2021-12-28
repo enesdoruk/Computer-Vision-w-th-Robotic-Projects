@@ -1,0 +1,20 @@
+<launch>
+  <node name="classification_node" pkg="classification" type="weather_cls.py" output="screen">
+
+    <param name = "topic" value = "/dash_rain/image_rect" />
+
+    <param name = "size_x" value = "120" />
+    <param name = "size_y" value = "80" />
+    
+    <param name = "in_shape" value = "48000" />
+    <param name = "enc_shape" value = "3000" />
+    
+    <param name = "sc_wght" value = "/home/enesdrk/Desktop/weather_classification/adastec_weather_cls/weights/sun_cloud_wghts_adabostDT.sav" />
+    <param name = "sr_wght" value = "/home/enesdrk/Desktop/weather_classification/adastec_weather_cls/weights/sun_rain_wghts_adabostDT.sav" />
+    <param name = "cr_wght" value = "/home/enesdrk/Desktop/weather_classification/adastec_weather_cls/weights/cloud_rain_wghts_adabostDT.sav" />
+    <param name = "scr_wght" value = "/home/enesdrk/Desktop/weather_classification/adastec_weather_cls/weights/sun_cloud__rain_wghts_adabostDT.sav" />
+    
+    <param name = "encoder_wght" value = "/home/enesdrk/Desktop/weather_classification/adastec_weather_cls/weights/autoencoder_best.pth" />
+
+  </node>
+</launch>
